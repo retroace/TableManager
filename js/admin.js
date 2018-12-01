@@ -9,7 +9,7 @@ var tablesArray = tables.map(function(key,value){
 jQuery(document).on('click', '.fetch-table-desc', function(event) {
 	event.preventDefault();
 	var table = jQuery(this).data('table');
-	$.ajax({
+	jQuery.ajax({
 		url: ajaxurl,
 		type: 'POST',
 		dataType: 'HTML',
@@ -34,7 +34,7 @@ jQuery(document).on('click', '.fetch-database', function(event) {
 	
 	jQuery(this).closest('tr').addClass('table-active').siblings('tr').removeClass('table-active');
 	
-	$.ajax({
+	jQuery.ajax({
 		url: ajaxurl,
 		type: 'POST',
 		dataType: 'HTML',
@@ -63,7 +63,7 @@ jQuery(document).on('click', '.fetch-database', function(event) {
 		console.log(error);
 	});
 	
-	$.ajax({
+	jQuery.ajax({
 		url: ajaxurl,
 		type: 'POST',
 		dataType: 'HTML',
@@ -140,7 +140,7 @@ jQuery(document).on('click', '.fetch-schema-database', function(event) {
 
 	}
 	
-	$.ajax({
+	jQuery.ajax({
 		url: ajaxurl,
 		type: 'POST',
 		dataType: 'HTML',
